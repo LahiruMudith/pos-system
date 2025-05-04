@@ -1,0 +1,8 @@
+body{
+    height: 90vh;
+    /*flex-direction: column;*/
+}
+#lblTotal{
+    font-size: 2rem;
+    font-weight: bold;
+}

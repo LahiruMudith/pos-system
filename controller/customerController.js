@@ -1,5 +1,5 @@
-import CustomerModel from "../model/CustomerModel.js";
-import { customer_db } from "../db/db.js";
+import CustomerModel from "../model/customerModel.js";
+import {customer_db, item_db} from "../db/db.js";
 
 function clearFields(){
     $('#customerId').val("");
@@ -13,15 +13,15 @@ $('#btnRegister').on('click', function (event) {
     event.preventDefault(); // Prevent form from submitting and refreshing
     let btnText = $('#btnRegister').text();
 
+    let customerId = $('#customerId').val();
+    let firstName = $('#firstName').val();
+    let lastName = $('#lastName').val();
+    let phoneNumber = $('#phoneNumber').val();
+    let address = $('#address').val();
+
     //Customer Register
     if (btnText === 'Register'){
         let isNewCustomer = true;
-
-        let customerId = $('#customerId').val();
-        let firstName = $('#firstName').val();
-        let lastName = $('#lastName').val();
-        let phoneNumber = $('#phoneNumber').val();
-        let address = $('#address').val();
 
         if (customerId === "" || firstName === "" || lastName === "" || phoneNumber === "" || address === "") {
             Swal.fire({
@@ -56,12 +56,6 @@ $('#btnRegister').on('click', function (event) {
 
     //Customer Update
     if (btnText === 'Update'){
-
-        let customerId = $('#customerId').val();
-        let firstName = $('#firstName').val();
-        let lastName = $('#lastName').val();
-        let phoneNumber = $('#phoneNumber').val();
-        let address = $('#address').val();
 
         if (customerId === "" || firstName === "" || lastName === "" || phoneNumber === "" || address === "") {
             Swal.fire({
@@ -134,9 +128,24 @@ $('#table-body').on('click', 'tr', function (event){
 });
 
 $('#table-body').on('click', '#btn-delete', function (event){
-    const customer_index = $(this).index();
-    customer_db.splice(customer_index, 1);
-    loadCustomers();
+    Swal.fire({
+        title: "Do you want to Delete this Customer?",
+        showCancelButton: true,
+        confirmButtonText: "Yes",
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            const customer_index = $(this).index();
+            customer_db.splice(customer_index, 1);
+            loadCustomers();
+            Swal.fire({
+                title: "Deleted",
+                icon: "success",
+                timer: 1000,
+                showConfirmButton: false
+            });
+        }
+    });
 });
 
 
