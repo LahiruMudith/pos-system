@@ -1,4 +1,5 @@
 function loadCustomerPage() {
+    console.log('Function called!');
     fetch('pages/customer.html')
         .then(response => response.text())
         .then(data => {

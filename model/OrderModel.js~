@@ -1,0 +1,11 @@
+export default class OrderModel {
+    constructor(oId, orderName, cId, customerName, phoneNumber, total, items) {
+        this.oId = oId;
+        this.orderName = orderName;
+        this.cId = cId;
+        this.customerName = customerName;
+        this.phoneNumber = phoneNumber;
+        this.total = total;
+        this.items = items;
+    }
+}

@@ -20,7 +20,7 @@
                 <a class="fw-bold nav-link active" aria-current="page" href="customer.html">Customer</a>
                 <a class="fw-bold nav-link" href="item.html">Item</a>
                 <a class="fw-bold nav-link" href="index.html">Place Order</a>
-                <a class="fw-bold nav-link" href="orderDetails.html" aria-disabled="true">Order Details</a>
+                <a class="fw-bold nav-link" href="place_order.html" aria-disabled="true">Order Details</a>
             </div>
             <div class="position-absolute top-0 end-0 d-flex align-items-center">
                 <a class="nav-link active m-1" aria-current="page" href="#"><img src="../assets/photos/icons/log-out.svg" width="30" alt="customer"></a>

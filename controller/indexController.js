@@ -18,18 +18,18 @@ var total = 0;
 
 $('#btnSearchCustomer').on('click', function(event) {
     event.preventDefault();
-   let cudtomerId = $('#customerId').val();
-   let isNewCustomer = true;
-   customer_db.forEach(function (customer){
-         if (customer.cId === cudtomerId){
-             isNewCustomer = false;
-             $('#table-body').empty();
-              $('#firstName').val(customer.firstName);
-              $('#lastName').val(customer.lastName);
-              $('#phoneNumber').val(customer.phoneNumber);
-              $('#address').val(customer.address);
-         }
-   })
+    let cudtomerId = $('#customerId').val();
+    let isNewCustomer = true;
+    customer_db.forEach(function (customer){
+        if (customer.cId === cudtomerId){
+            isNewCustomer = false;
+            $('#table-body').empty();
+            $('#firstName').val(customer.firstName);
+            $('#lastName').val(customer.lastName);
+            $('#phoneNumber').val(customer.phoneNumber);
+            $('#address').val(customer.address);
+        }
+    })
     if (isNewCustomer){
         Swal.fire({
             title: "Can't findCustomer ",
