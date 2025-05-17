@@ -12,7 +12,7 @@ body{
     align-items: center;
 }
 .item-table{
-    width: 98% !important;
+    width: 100% !important;
 }
 
 @media all and (max-width: 1145px) {

@@ -29,3 +29,22 @@
         font-size: 0.4rem;
     }
 }
+@media all and (max-width: 385px){
+    .order-table > thead > tr > th{
+        font-size: 0.3rem;
+    }
+    .order-table > tbody > tr > td{
+        font-size: 0.3rem;
+    }
+    .search-bar{
+        width: 80% !important;
+    }
+}
+@media all and (max-width: 326px){
+    .order-table > thead > tr > th{
+        font-size: 0.2rem;
+    }
+    .order-table > tbody > tr > td{
+        font-size: 0.2rem;
+    }
+}

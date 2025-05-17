@@ -2,56 +2,56 @@ import {order_db, item_db, customer_db} from "../db/db.js";
 import OrderModel from "../model/OrderModel.js";
 
 // Sample data for order_db
-// let items = [
-//     {
-//         iId: "I001",
-//         itemName: "Burger",
-//         qty: 2,
-//         price: 200,
-//         total: 4000
-//     },
-//     {
-//         iId: "I002",
-//         itemName: "Pizza",
-//         qty: 1,
-//         price: 500,
-//         total: 1000
-//     },
-//     {
-//         iId: "I003",
-//         itemName: "Pasta",
-//         qty: 3,
-//         price: 300,
-//         total: 900
-//     }
-// ];
-// let items2 = [
-//     {
-//         iId: "I004",
-//         itemName: "Burger",
-//         qty: 2,
-//         price: 200,
-//         total: 4000
-//     },
-//     {
-//         iId: "I005",
-//         itemName: "Pizza",
-//         qty: 1,
-//         price: 500,
-//         total: 1000
-//     },
-//     {
-//         iId: "I006",
-//         itemName: "Pasta",
-//         qty: 3,
-//         price: 300,
-//         total: 900
-//     }
-// ];
-// let order1 = new OrderModel("OR001", "C001", "Lahiru", "0761298256", "1200", items)
-// let order2 = new OrderModel("OR002", "C002", "Mudith", "0761298256", "12000", items2)
-// order_db.push(order1)
-// order_db.push(order2)
+let items = [
+    {
+        iId: "I001",
+        itemName: "Burger",
+        qty: 2,
+        price: 200,
+        total: 4000
+    },
+    {
+        iId: "I002",
+        itemName: "Pizza",
+        qty: 1,
+        price: 500,
+        total: 1000
+    },
+    {
+        iId: "I003",
+        itemName: "Pasta",
+        qty: 3,
+        price: 300,
+        total: 900
+    }
+];
+let items2 = [
+    {
+        iId: "I004",
+        itemName: "Burger",
+        qty: 2,
+        price: 200,
+        total: 4000
+    },
+    {
+        iId: "I005",
+        itemName: "Pizza",
+        qty: 1,
+        price: 500,
+        total: 1000
+    },
+    {
+        iId: "I006",
+        itemName: "Pasta",
+        qty: 3,
+        price: 300,
+        total: 900
+    }
+];
+let order1 = new OrderModel("OR001", "C001", "Lahiru", "0761298256", "1200", items)
+let order2 = new OrderModel("OR002", "C002", "Mudith", "0761298256", "12000", items2)
+order_db.push(order1)
+order_db.push(order2)
 
 var orderArray = order_db;
 
