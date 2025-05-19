@@ -11,4 +11,4 @@ export default class OrderModel {
         this.discount = discount;
         this.items = items;
     }
-}
+};
